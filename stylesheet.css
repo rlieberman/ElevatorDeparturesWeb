@@ -1,0 +1,100 @@
+@font-face {
+    font-family: LCD;
+    src: url(assets/jd_lcd_rounded.otf);
+}
+
+
+body {
+
+  background: black;
+  text-transform:uppercase;
+  border:0;
+  font-family: LCD, sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+
+/*Used this example to create scrolling text using CSS animations
+http://www.quackit.com/html/html_editors/scratchpad/?example=/css/codes/marquees/scrolling_text*/
+
+
+/*div that holds my content*/
+#content {
+ height: 100px;
+ overflow: hidden;
+ position: relative;
+ background-color: black;
+ padding-top: 15%;
+}
+
+
+#content h1 {
+ font-size: 5em;
+ color: #ff502d;
+ position: absolute;
+ width: 140%;
+ height: 100%;
+ margin: 0;
+ line-height: 50px;
+ text-align: left;
+ text-shadow: 0px 0px 12px #ff502d;
+
+ /* set the starting position */
+ -moz-transform:translateX(100%);
+ -webkit-transform:translateX(100%);
+ transform:translateX(100%);
+
+ /* Apply animation to this element, let's call it marquee scroll */
+ -moz-animation: marquescroll 15s linear infinite;
+ -webkit-animation: marqueescroll 15s linear infinite;
+ animation: marqueescroll 15s linear infinite;
+}
+
+/* Move it (define the animation through keyframes) */
+@-moz-keyframes marqueescroll {
+ 0%   { -moz-transform: translateX(100%); }
+ 100% { -moz-transform: translateX(-100%); }
+}
+
+@-webkit-keyframes marqueescroll {
+ 0%   { -webkit-transform: translateX(100%); }
+ 100% { -webkit-transform: translateX(-100%); }
+}
+
+@keyframes marqueescroll {
+ 0%   {
+ -moz-transform: translateX(100%); /* Firefox bug fix */
+ -webkit-transform: translateX(100%); /* Firefox bug fix */
+ transform: translateX(100%);
+ }
+
+ 100% {
+ -moz-transform: translateX(-100%); /* Firefox bug fix */
+ -webkit-transform: translateX(-100%); /* Firefox bug fix */
+ transform: translateX(-100%);
+ }
+}
+
+
+#load {
+    margin-top:200px;
+}
+
+button {
+  background-color: #ff502d;
+  display:inline-block;
+  color: black;
+  margin-top:0px;
+  margin-left: 100px;
+  padding:20px;
+  font-size: 36px;
+  text-transform: uppercase;
+  border:0;
+  width: 400px;
+  font-family: LCD, sans-serif;
+}
+
+button:hover {
+ opacity: .5;
+}

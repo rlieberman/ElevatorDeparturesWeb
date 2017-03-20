@@ -1,0 +1,27 @@
+<html>
+  <head>
+
+<!--
+ This example uses:
+ * the FlightXML2 FlightInfoEx and DecodeFlightRoute functions over REST:
+      http://flightaware.com/commercial/flightxml/
+-->
+  <link type="text/css" rel="stylesheet" href="stylesheet.css"/>
+  <script src="jquery-3.2.0.min.js"></script>
+  <script type="text/javascript" src="flights.js"></script>
+
+  </head>
+
+  <body>
+    <div id="content">
+      <h1 id="scrollingflight">Click the button to load NYC flight departures...</h1>
+    </div>
+
+    <button id="load">Load next departing flight</button>
+
+    <audio id="ding">
+      <source src="assets/ding.mp3"></source>
+    </audio>
+  </body>
+</html>
+   
